@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cafeteria Bulma</title>
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+
+    <link rel="stylesheet" href="css/bulma-quickview.min.css">
+
+    <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        ::-webkit-scrollbar {
+            height: 10px;
+            width: 10px
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #efefef;
+            border-radius: 6px
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #d5d5d5;
+            border-radius: 6px
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c4c4c4
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- START NAV -->
+    <nav class="navbar is-fixed-top" style="background-color: crimson;">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <img src="img/LogoSF.png" alt="Logo" width="45" height="45">
+                    JaguarEats
+                </a>
+                <span class="navbar-burger burger" data-target="navbarMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item " href="#comidas">Comidas</a>
+                    <a class="navbar-item " href="#bebidas">Bebidas</a>
+                    <a class="navbar-item " href="#galletas">Galletas</a>
+                    <a class="navbar-item " href="#refrescos">Refrescos</a>
+                    <a class="navbar-item " href="#frituras">Frituras</a>
+                    <a class="navbar-item " href="#postres">Postres</a>
+                    <form class="is-flex" role="search">
+                        <input class="" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="button" type="submit"><span class="icon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </button>
+                    </form>
+                    <button class="button is-primary" data-show="quickview" data-target="quickviews"><span class="icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- END NAV -->
+    <br><br>
+    <!-- Start Hero Carousel -->
+    <section>
+        <div id="slider">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-3by1 is-covered">
+                        <img src="img/img1.jpg" alt="" />
+                    </figure>
+                </div>
+                <div class="card-content slider-text ">
+                    <div class="is-size-5 box has-text-centered">
+                        Aprovehca las promociones que tenemos para ti. <br>
+                        <i>Sabores muy variados.</i>
+                    </div>
+                </div>
+            </div>
+            <div class="card ">
+                <div class="card-image">
+                    <figure class="image is-3by1 is-covered">
+                        <img src="img/img2.jpg" alt="" />
+                    </figure>
+                </div>
+                <div class="card-content slider-text ">
+                    <div class="is-size-5 box has-text-centered">
+                        Aprovehca las promociones que tenemos para ti. <br>
+                        <i>Sabores muy variados.</i>
+                    </div>
+                </div>
+            </div>
+            <div class="card ">
+                <div class="card-image">
+                    <p class="image is-3by1 is-covered">
+                        <img src="img/img3.jpg" alt="" />
+                    </p>
+                </div>
+                <div class="card-content slider-text ">
+                    <div class="is-size-5 box has-text-centered">
+                        Aprovehca las promociones que tenemos para ti. <br>
+                        <i>Sabores muy variados.</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero Carousel -->
+
+    <div class="container">
+        <div class="container is-fullhd">
+
+            <!-- Inicia Fila columns = row -->
+            <div class="columns">
+                <!-- Columna -->
+                <div class="column" id="comidas">
+                    <!-- Inicia Card -->
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title titulo">Comidas</p>
+                        </header>
+                        <!-- Empieza Contenido dento del Card -->
+                        <div class="card-content">
+                            <!-- Iniciamos una nueva fila -->
+                            <div class="columns">
+                                <!-- "a" estara encerrando todo el contenido para que al seleccionar cualquier parte abra el modal -->
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <!-- Primera Columna  column = col-->
+                                    <div class="column box">
+                                        <!-- Media es el contenedor que ayuda a visualizar asi el contenido -->
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Comida/hamburguesa.png"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Hamburguesa</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <div class="column box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Comida/hamburguesa2.png"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Hamburguesa con papas</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <div class="column box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Comida/pizza.png"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Pizza</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <div class="column box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Comida/pizza2.png"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Pizza</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div> <!-- Termina Card -->
+                </div>
+            </div> <!-- Termina Fila -->
+
+
+            <!-- Inicia Fila columns = row -->
+            <div class="columns">
+                <!-- Columna -->
+                <div class="column" id="bebidas">
+                    <!-- Inicia Card -->
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title titulo">Bebidas</p>
+                        </header>
+                        <!-- Empieza Contenido dento del Card -->
+                        <div class="card-content">
+                            <!-- Iniciamos una nueva fila -->
+                            <div class="columns">
+                                <!-- "a" estara encerrando todo el contenido para que al seleccionar cualquier parte abra el modal -->
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <!-- Primera Columna  column = col-->
+                                    <div class="column box">
+                                        <!-- Media es el contenedor que ayuda a visualizar asi el contenido -->
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Bebidas/horchata.png"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Horchata</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <div class="column box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Bebidas/jamaica.png"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Jamaica</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <div class="column box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Bebidas/limon.png"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Limon</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <div class="column box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Bebidas/sandia.png"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Sandia</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div> <!-- Termina Card -->
+                </div>
+            </div> <!-- Termina Fila -->
+
+
+            <!-- Inicia Fila columns = row -->
+            <div class="columns">
+                <!-- Columna -->
+                <div class="column" id="galletas">
+                    <!-- Inicia Card -->
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title titulo">Galletas</p>
+                        </header>
+                        <!-- Empieza Contenido dento del Card -->
+                        <div class="card-content">
+                            <!-- Iniciamos una nueva fila -->
+                            <div class="columns">
+                                <!-- "a" estara encerrando todo el contenido para que al seleccionar cualquier parte abra el modal -->
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <!-- Primera Columna  column = col-->
+                                    <div class="column box">
+                                        <!-- Media es el contenedor que ayuda a visualizar asi el contenido -->
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Galletas/deliciosas.jpeg"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Deliciosas</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <div class="column box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Galletas/Oreo.jpeg"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Oreo</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <div class="column box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Galletas/maria.jpeg"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Maria</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <div class="column box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Galletas/principe.jpeg"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Principe</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div> <!-- Termina Card -->
+                </div>
+            </div> <!-- Termina Fila -->
+
+
+            <!-- Inicia Fila columns = row -->
+            <div class="columns">
+                <!-- Columna -->
+                <div class="column" id="refrescos">
+                    <!-- Inicia Card -->
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title titulo">Refrescos</p>
+                        </header>
+                        <!-- Empieza Contenido dento del Card -->
+                        <div class="card-content">
+                            <!-- Iniciamos una nueva fila -->
+                            <div class="columns">
+                                <!-- "a" estara encerrando todo el contenido para que al seleccionar cualquier parte abra el modal -->
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <!-- Primera Columna  column = col-->
+                                    <div class="column box">
+                                        <!-- Media es el contenedor que ayuda a visualizar asi el contenido -->
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Refresco/coca.png"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Cocacola</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <div class="column box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Refresco/fresca.png"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Fresca</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <div class="column box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Refresco/mirinda.png"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Mirinda</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <div class="column box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Refresco/penafiel.png"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Peñafiel</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div> <!-- Termina Card -->
+                </div>
+            </div> <!-- Termina Fila -->
+
+
+            <!-- Inicia Fila columns = row -->
+            <div class="columns">
+                <!-- Columna -->
+                <div class="column" id="frituras">
+                    <!-- Inicia Card -->
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title titulo">Frituras</p>
+                        </header>
+                        <!-- Empieza Contenido dento del Card -->
+                        <div class="card-content">
+                            <!-- Iniciamos una nueva fila -->
+                            <div class="columns">
+                                <!-- "a" estara encerrando todo el contenido para que al seleccionar cualquier parte abra el modal -->
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <!-- Primera Columna  column = col-->
+                                    <div class="column box">
+                                        <!-- Media es el contenedor que ayuda a visualizar asi el contenido -->
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Frituras/cheetos.jpeg"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Cheetos</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <div class="column box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Frituras//fritos.png"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Fritos</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <div class="column box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Frituras//rufles.jpeg"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Ruffles</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <div class="column box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Frituras//sabritas.png"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Sabritas</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div> <!-- Termina Card -->
+                </div>
+            </div> <!-- Termina Fila -->
+
+
+            <!-- Inicia Fila columns = row -->
+            <div class="columns">
+                <!-- Columna -->
+                <div class="column" id="postres">
+                    <!-- Inicia Card -->
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title titulo">Postres</p>
+                        </header>
+                        <!-- Empieza Contenido dento del Card -->
+                        <div class="card-content">
+                            <!-- Iniciamos una nueva fila -->
+                            <div class="columns">
+                                <!-- "a" estara encerrando todo el contenido para que al seleccionar cualquier parte abra el modal -->
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <!-- Primera Columna  column = col-->
+                                    <div class="column box">
+                                        <!-- Media es el contenedor que ayuda a visualizar asi el contenido -->
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Postres/gelatina.jpg"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Gelatina</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <div class="column box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Postres//pastel.jpg"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Pastel</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <div class="column box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Postres//PayLimon.jpg"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Pay de Limon</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="js-modal-trigger" data-target="modal">
+                                    <div class="column box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-96x96">
+                                                    <img class="is-rounded" src="img/Postres//payqueso.jpg"
+                                                        alt="Placeholder image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">Pay de Qeuso</p>
+                                                <p class="subtitle is-5">$35</p>
+                                                <p class="text is-5"> Disponible: 32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div> <!-- Termina Card -->
+                </div>
+            </div> <!-- Termina Fila -->
+
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head" style="background-color: crimson;">
+                <p class="modal-card-title has-text-white">Ver Producto</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="container mt-5">
+                    <div class="columns">
+                        <div class="column is-6">
+                            <img src="img/Comida/pizza2.png" alt="Producto" class="img-thumbnail">
+                            <div class="form-group p-2">
+                                <label for="cantidad">Cantidad:</label>
+                                <input type="number" class="form-control" id="cantidad" value="1">
+                            </div>
+                        </div>
+
+                        <div class="column is-6s">
+                            <h2>Pizza de Pepperoni</h2>
+                            <p>Descripción del producto:</p>
+                            <p>● De un sabor grandioso, con los mismos ingredientes que hacen agua la boca que
+                                nuestras pizzas
+                                masa estilo Hand-Tossed, ¡es perfecta para la comida o como un snack!<br>
+                                ● Hecha con nuestra salsa original y repleta con queso mozzarella y delicioso
+                                pepperoni <br>
+                                ● Esta pizza de pepperoni está siempre deliciosa... porque NO ES DELIVERY. </p>
+                            <p>Precio: $235.00</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="modal-card-foot" style="background-color: yellow;">
+                <button class="button is-success">Agregar a Carrito</button>
+                <button class="button">Cancel</button>
+            </footer>
+        </div>
+    </div>
+    <!-- Modal -->
+
+    <!-- QuickView -->
+    <div id="quickviews" class="quickview">
+        <header class="quickview-header">
+            <p class="title">Carrito</p>
+            <span class="delete" data-dismiss="quickview"></span>
+        </header>
+
+        <div class="quickview-body">
+            <div class="quickview-block">
+                <!-- Card -->
+                <div class="card">
+                    <!-- Empieza Contenido dento del Card -->
+                    <div class="card-content">
+                        <!-- Iniciamos una nueva fila -->
+                        <div class="columns">
+                            <!-- Primera Columna  column = col-->
+                            <div class="column box">
+                                <!-- Media es el contenedor que ayuda a visualizar asi el contenido -->
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-96x96">
+                                            <img class="is-rounded" src="img/Postres/gelatina.jpg"
+                                                alt="Placeholder image">
+                                        </figure>
+                                        <button class="button is-danger mt-1">Eliminar</button>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-5">Gelatina</p>
+                                        <p class="subtitle is-5">$35</p>
+                                        <p class="text is-5"> Disponible: 32</p>
+                                        <input type="number" class="form-control m-1" id="cantidad" value="1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Termina Card -->
+                <!-- Card -->
+                <div class="card">
+                    <!-- Empieza Contenido dento del Card -->
+                    <div class="card-content">
+                        <!-- Iniciamos una nueva fila -->
+                        <div class="columns">
+                            <!-- Primera Columna  column = col-->
+                            <div class="column box">
+                                <!-- Media es el contenedor que ayuda a visualizar asi el contenido -->
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-96x96">
+                                            <img class="is-rounded" src="img/Bebidas/horchata.png"
+                                                alt="Placeholder image">
+                                        </figure>
+                                        <button class="button is-danger mt-1">Eliminar</button>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-5">Horchata</p>
+                                        <p class="subtitle is-5">$35</p>
+                                        <p class="text is-5"> Disponible: 32</p>
+                                        <input type="number" class="form-control m-1" id="cantidad" value="3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Termina Card -->
+
+                <!-- Card -->
+                <div class="card">
+                    <!-- Empieza Contenido dento del Card -->
+                    <div class="card-content">
+                        <!-- Iniciamos una nueva fila -->
+                        <div class="columns">
+                            <!-- Primera Columna  column = col-->
+                            <div class="column box">
+                                <!-- Media es el contenedor que ayuda a visualizar asi el contenido -->
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-96x96">
+                                            <img class="is-rounded" src="img/Comida/hamburguesa.png"
+                                                alt="Placeholder image">
+                                        </figure>
+                                        <button class="button is-danger mt-3">Eliminar</button>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-5">Hamburguesa</p>
+                                        <p class="subtitle is-5">$35</p>
+                                        <p class="text is-5"> Disponible: 32</p>
+                                        <input type="number" class="form-control m-1" id="cantidad" value="2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Termina Card -->
+                 <!-- Card -->
+                 <div class="card">
+                    <!-- Empieza Contenido dento del Card -->
+                    <div class="card-content">
+                        <!-- Iniciamos una nueva fila -->
+                        <div class="columns">
+                            <!-- Primera Columna  column = col-->
+                            <div class="column box">
+                                <!-- Media es el contenedor que ayuda a visualizar asi el contenido -->
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-96x96">
+                                            <img class="is-rounded" src="img/Frituras/cheetos.jpeg"
+                                                alt="Placeholder image">
+                                        </figure>
+                                        <button class="button is-danger mt-3">Eliminar</button>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-5">Chettos</p>
+                                        <p class="subtitle is-5">$35</p>
+                                        <p class="text is-5"> Disponible: 32</p>
+                                        <input type="number" class="form-control m-1" id="cantidad" value="2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Termina Card -->
+            </div>
+        </div>
+
+        <footer class="quickview-footer">
+            <div class="columns has-text-centered">
+                <div class="column is-6">
+                    <h5>Total a pagar:</h5>
+                </div>
+                <div class="column is-4">
+                    <h6>$345</h6>
+                </div>
+            </div>
+
+            <button class="button is-rounded is-medium is-success">Pagar</button>
+        </footer>
+    </div>
+    <!-- QuickView -->
+
+    <footer class="text-center has-text-white" style="background-color: crimson;">
+        <div class="container">
+            <!-- Section: Links  -->
+            <section class="">
+                <div class="container text-center text-md-start">
+                    <!-- Grid columns -->
+                    <div class="columns">
+                        <!-- Grid column -->
+                        <div class="column is-3 mx-auto">
+                            <!-- Contenido -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                <i class="fas fa-gem me-3 text-secondary"></i>JaguarEats
+                            </h6>
+                            <p>
+                                Cafeteria con 58 años de tradicion dentro del ITVH, contamos con gran variedad en la
+                                venta de alimentos, refrescos, postres, etc.
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="column is-2 mx-auto">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Redes Sociales COFFETECNM
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">WhatsApp</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Facebook</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Instagram</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="column is-3 mx-auto">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Redes Sociales TECNM
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">Facebook</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Instagram</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">9933 530259</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="column is-4 col-lg-3 col-xl-3 mx-auto mb-md-0">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
+                            <p><i class="fas fa-home me-3 text-secondary"></i>Km. 3.5 Carretera Villahermosa-Frontera,
+                                Cd
+                                Industrial</p>
+                            <p>
+                                <i class="fas fa-envelope me-3 text-secondary"></i>
+                                86010 Villahermosa, Tab
+                            </p>
+                            <p><i class="fas fa-phone me-3 text-secondary"></i> + 52 9933 05 8596</p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid columns -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+
+            <!-- Copyright -->
+            <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.025);">
+                © 2023 Copyright:
+                <a class="text-reset fw-bold" href="#">JaguarEats</a>
+            </div>
+            <!-- Copyright -->
+        </div>
+    </footer>
+
+    <script src="bulma-quickview-master/dist/js/bulma-quickview.js"></script>
+    <script src="js/script.js"></script>
+
+    <script type="text/javascript" src="/js/bulma-quickview.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <script>
+        bulmaCarousel.attach('#slider', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            infinite: true,
+            autoplay: true,
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+
+        });
+    </script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Functions to open and close a modal
+            function openModal($el) {
+                $el.classList.add('is-active');
+            }
+
+            function closeModal($el) {
+                $el.classList.remove('is-active');
+            }
+
+            function closeAllModals() {
+                (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+                    closeModal($modal);
+                });
+            }
+
+            // Add a click event on buttons to open a specific modal
+            (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+                const modal = $trigger.dataset.target;
+                const $target = document.getElementById(modal);
+
+                $trigger.addEventListener('click', () => {
+                    openModal($target);
+                });
+            });
+
+            // Add a click event on various child elements to close the parent modal
+            (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+                const $target = $close.closest('.modal');
+
+                $close.addEventListener('click', () => {
+                    closeModal($target);
+                });
+            });
+
+            // Add a keyboard event to close all modals
+            document.addEventListener('keydown', (event) => {
+                if (event.code === 'Escape') {
+                    closeAllModals();
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
